@@ -21,7 +21,7 @@
 2. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/DmitrySirakov/Avito-Analytics-Avito.git
+git clone https://github.com/DmitrySirakov/Academy-Analytics-Avito.git
 cd Avito-Analytics-Avito/hw_1_python_basic
 ```
 
@@ -43,6 +43,6 @@ streamlit run main.py
 
 ## Структура проекта
 
-- **main.py**: Основной файл приложения, содержит логику чат-бота.
+- **main.py**: Основной файл приложения, содержит логику чата.
 - **chat_utils.py**: Функции для отображения сообщений в чате.
 - **weather_api.py**: Функции для получения погодных данных.
