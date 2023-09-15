@@ -6,7 +6,7 @@
 
 ## Особенности
 
-- Проект задеплоен. Посмотреть итоговую версию можно по ссылке [Сайт](https://duck-adventures.streamlit.app)
+- Проект задеплоен. Посмотреть итоговую версию [Сайт \*тык\*](https://duck-adventures.streamlit.app) или по ссылке:
 ```bash
 https://duck-adventures.streamlit.app
 ``` 
