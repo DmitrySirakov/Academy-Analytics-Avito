@@ -20,12 +20,11 @@ def get_weather(city="Moscow") -> typing.Tuple:
     """
     load_dotenv()
     API_KEY = os.environ.get("API_KEY")
-    BASE_URL = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
-    response = requests.get(BASE_URL, timeout=10)
+    BASE_URL = "http://api.openweathermap.org/data/2.5/weather/"
+    params = {"q": city, "appid": API_KEY, "units": "metric", "lang": "ru"}
+    response = requests.get(BASE_URL, params=params, timeout=10)
     if response.status_code == 200:
         data = response.json()
-        main = data["main"]
-        weather_report = data["weather"]
-        return main["temp"], weather_report[0]["description"]
+        return data["main"]["temp"], data["weather"][0]["description"]
     else:
         return None, None
