@@ -26,5 +26,4 @@ def get_weather(city="Moscow") -> typing.Tuple:
     if response.status_code == 200:
         data = response.json()
         return data["main"]["temp"], data["weather"][0]["description"]
-    else:
-        return None, None
+    return None, None
