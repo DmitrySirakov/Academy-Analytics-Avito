@@ -28,7 +28,7 @@ def step2_umbrella():
     temp, description = get_weather()
     if temp and description:
         display_message(
-            f"Сейчас в Москве {temp}°C и {description}. Утка с умом взяла зонтик ☂️!",
+            f"Сейчас в Москве {temp}°C и {description}. Утка с умом взяла зонтик! ☂️",
             "bot",
         )
     else:
@@ -45,11 +45,11 @@ def step2_no_umbrella():
     if temp and description:
         display_message(
             f"Сейчас в Москве {temp}°C и {description}.\
-                  Надеемся, что Утке не понадобится зонтик ☂️!",
+                  Надеемся, что Утке не понадобится зонтик! ☂️",
             "bot",
         )
     else:
-        display_message("Утка решила не брать зонтик и наслаждаться днем ☀️!", "bot")
+        display_message("Утка решила не брать зонтик и наслаждаться днем! ☀️", "bot")
 
 
 if __name__ == "__main__":
