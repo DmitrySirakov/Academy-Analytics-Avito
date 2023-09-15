@@ -26,14 +26,14 @@ def step2_umbrella():
     Обработка выбора "да" и отображение соответствующего сообщения.
     """
     temp, description = get_weather()
-    if temp and description:
+    if "дождь" in description:
         display_message(
             f"Сейчас в Москве {temp}°C и {description}. Утка с умом взяла зонтик! ☂️",
             "bot",
         )
     else:
         display_message(
-            "Утка решила взять зонтик, чтобы быть готовой к любой погоде!", "bot"
+            "Утка решила взять зонтик, чтобы быть готовой к любой погоде! ⛅", "bot"
         )
 
 
@@ -42,14 +42,18 @@ def step2_no_umbrella():
     Обработка выбора "нет" и отображение соответствующего сообщения.
     """
     temp, description = get_weather()
-    if temp and description:
+    if "дождь" in description:
         display_message(
             f"Сейчас в Москве {temp}°C и {description}.\
-                  Надеемся, что Утке не понадобится зонтик! ☂️",
+                  Всё-таки пошёл дождь и утка промокла! ☂️",
             "bot",
         )
     else:
-        display_message("Утка решила не брать зонтик и наслаждаться днем! ☀️", "bot")
+        display_message(
+            f"Сейчас в Москве {temp}°C и {description}.\
+                  Утка не взяла зонтик и наслаждается солнечным днём! ☀️",
+            "bot",
+        )
 
 
 if __name__ == "__main__":
